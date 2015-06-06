@@ -1,0 +1,23 @@
+# :::::::::::::::::::::::::::::::::::
+#  Relation Behavior Config
+# :::::::::::::::::::::::::::::::::::
+
+users:
+    label: Users
+    list: ~/plugins/dma/friends/controllers/groups/user_columns.yaml
+    manage:
+        recordsPerPage: 10
+        showSearch: true    
+        
+    # pivot:
+    #     fields:
+    #         membership_status:
+    #             label: Membership status
+    #             type: dropdown
+    #             options:
+    #                 PENDING   : PENDING
+    #                 ACCEPTED  : ACCEPTED
+    #                 REJECTED  : REJECTED
+    #                 CANCELLED : CANCELLED
+                
+        

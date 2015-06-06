@@ -1,0 +1,152 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Title
+        required: true
+    toolbar:
+        type: partial
+        path: ~/plugins/dma/friends/partials/_content_toolbar.htm
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        # ===================================
+        #  Content tab 
+        # ===================================
+        description:
+            label: Description
+            tab: Content
+            span: left
+            type: richeditor
+            size: huge
+        image:
+            label: Image
+            tab: Content
+            span: right
+            type: fileupload
+            mode: image
+            imageHeight: 300 
+            imageWidth: 500 
+        excerpt:
+            label: Excerpt
+            description: a short amount of text about this badge.  This will be displayed in badge listings
+            tab: Content
+            span: left
+            type: richeditor
+            size: huge
+        # ===================================
+        #  Categories tab 
+        # ===================================
+        categories:
+            label: Select as many that apply
+            type: relation
+            mode: dropdown 
+            options:
+                nameColumn: name
+            tab: Categories
+        priority:
+            label: Priority
+            type: dropdown
+            options:
+                0: Hide
+                1: Low
+                5: Medium
+                10: High
+                11: Always Display
+            default: 5
+            tab: Categories
+            span: left
+        # ===================================
+        #  Configuration tab 
+        # ===================================
+        points:
+            label: Points Awarded
+            description: The number of points awarded for completing the activity
+            tab: Configuration
+            span: left
+            type: number
+            required: true
+            default: 0
+        activity_lockout:
+            label: Check-in Lockout (minutes)
+            description: Allow only check-in with same activity code once per X minutes.
+            tab: Configuration
+            type: number
+            span: right
+        activity_type:
+            label: Activity Type
+            tab: Configuration
+            type: activitytype
+            required: true
+        # ===================================
+        #  Publish tab 
+        # ===================================
+        time_restriction: 
+            label: Time Restriction
+            tab: Publishing Options 
+            span: left 
+            type: dropdown
+            options:
+                0: None
+                1: Specific Days/Hours
+                2: Specific Date Range
+        time_restriction_data:
+            type: timerestrictions
+            tab: Publishing Options
+            containerAttributes:
+                data-trigger-action: display
+                data-trigger: 'select[name="Activity[time_restriction]"]'
+                data-trigger-condition: value[1]
+        date_begin:
+            label: Beginning Date
+            description: If set, Reward can only be redeemed after this date.
+            tab: Publishing Options 
+            required: true
+            span: left
+            type: datepicker
+            mode: datetime
+            containerAttributes:
+                data-trigger-action: display
+                data-trigger: 'select[name="Activity[time_restriction]"]'
+                data-trigger-condition: value[2]
+        date_end:
+            label: Ending Date
+            description: If set, Reward can only be redeemed before this date.
+            tab: Publishing Options 
+            required: true
+            span: right 
+            type: datepicker
+            mode: datetime
+            containerAttributes:
+                data-trigger-action: display
+                data-trigger: 'select[name="Activity[time_restriction]"]'
+                data-trigger-condition: value[2]
+        is_published:
+            label: Published
+            tab: Publishing Options 
+            span: left
+            type: checkbox
+            default: true
+        is_archived:
+            label: Archive
+            tab: Publishing Options 
+            span: left
+            type: checkbox
+        # created_at:
+        #     label: Created on
+        #     tab: Publishing Options 
+        #     span: left
+        #     type: datepicker
+        #     mode: datetime
+        # ===================================
+        #  Badges tab 
+        # ===================================
+        badges:
+            tab: Badges
+            type: partial
+            path: ~/plugins/dma/friends/models/activity/badges.htm
+

@@ -1,0 +1,45 @@
+<div class="reward-full row">
+    <div class="image col-md-4 col-sm-4">
+         <img src="{{ model.image.getThumb(300, 300, {'extension': 'png'}) }}"/>
+    </div>
+    
+    <div class="body col-md-8 col-sm-8">
+        <div class="description">
+            {% if model.inventory > 0 %}
+            <p><strong>{{ model.inventory }} rewards remaining</strong></p>
+            {% endif %}
+            {{ model.description|raw }}
+        </div>
+
+        {{ model.fine_print|raw }}
+
+        {% if user.points >= model.points %}
+        <button class="btn btn-primary redeem" 
+            data-request="onRedeem"
+            data-dismiss="popup"
+            data-request-data="id: {{ model.id }}"
+        >Claim for {{ model.pointsFormatted }} points</button>
+        {% else %}
+        <button class="btn btn-default redeem">You need {{ model.pointsFormatted }} points</button>
+        {% endif %}
+    </div>
+
+    <div class="buttons">
+        {% if hideBookmark is empty %}
+        <span class="bookmark">
+            {% if model.isBookmarked %}
+            <button type="submit" 
+                data-request="onBookmarkRemove" 
+                data-request-data="id: {{ model.id }}" 
+                class="btn btn-info icon-bookmark bookmarked">Remove Bookmark</button>
+            {% else %}
+            <button type="submit" 
+                data-request="onBookmarkAdd" 
+                data-request-data="id: {{ model.id }}" 
+                class="btn btn-info icon-bookmark">Bookmark This</button>
+            {% endif %}
+        </span>
+        {% endif %}
+        <button type="submit" data-dismiss="popup" class="btn btn-default">Close</button>
+    </div>
+</div>

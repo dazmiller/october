@@ -1,0 +1,44 @@
+\hypertarget{classDMA_1_1Friends_1_1Commands_1_1DailyPoints}{}\section{D\+M\+A\textbackslash{}Friends\textbackslash{}Commands\textbackslash{}Daily\+Points Class Reference}
+\label{classDMA_1_1Friends_1_1Commands_1_1DailyPoints}\index{D\+M\+A\textbackslash{}\+Friends\textbackslash{}\+Commands\textbackslash{}\+Daily\+Points@{D\+M\+A\textbackslash{}\+Friends\textbackslash{}\+Commands\textbackslash{}\+Daily\+Points}}
+Inheritance diagram for D\+M\+A\textbackslash{}Friends\textbackslash{}Commands\textbackslash{}Daily\+Points\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d3a/classDMA_1_1Friends_1_1Commands_1_1DailyPoints}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDMA_1_1Friends_1_1Commands_1_1DailyPoints_a744a2cce8db836d1e2ae4db904361b1e}{fire} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDMA_1_1Friends_1_1Commands_1_1DailyPoints_affe8b91e4538363d05401b06b59ec6b0}{}{\bfseries \$name} = \textquotesingle{}friends\+:points-\/daily\textquotesingle{}\label{classDMA_1_1Friends_1_1Commands_1_1DailyPoints_affe8b91e4538363d05401b06b59ec6b0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDMA_1_1Friends_1_1Commands_1_1DailyPoints_a744a2cce8db836d1e2ae4db904361b1e}{}\index{D\+M\+A\+::\+Friends\+::\+Commands\+::\+Daily\+Points@{D\+M\+A\+::\+Friends\+::\+Commands\+::\+Daily\+Points}!fire@{fire}}
+\index{fire@{fire}!D\+M\+A\+::\+Friends\+::\+Commands\+::\+Daily\+Points@{D\+M\+A\+::\+Friends\+::\+Commands\+::\+Daily\+Points}}
+\subsubsection[{fire}]{\setlength{\rightskip}{0pt plus 5cm}D\+M\+A\textbackslash{}\+Friends\textbackslash{}\+Commands\textbackslash{}\+Daily\+Points\+::fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDMA_1_1Friends_1_1Commands_1_1DailyPoints_a744a2cce8db836d1e2ae4db904361b1e}
+Set the number of points set per week back to zero on sunday morning \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+27     \{
+28         DB::table(\textcolor{stringliteral}{'users'})
+29             ->update([\textcolor{stringliteral}{'points\_today'} => 0]);
+30     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+commands/Daily\+Points.\+php\end{DoxyCompactItemize}

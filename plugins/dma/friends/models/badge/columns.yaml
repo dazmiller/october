@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: Title
+        searchable: true
+    points:
+        label: Points Earned
+        type: number
+    created_at:
+        label: Created
+        type: datetime
+    updated_at:
+        label: Last Modified
+        type: datetime
+    date_begin:
+        label: Beginning Date
+        type: datetime
+    date_end:
+        label: Ending Date
+        type: datetime
+    is_published:
+        label: Published 
+        type: switch
+    is_archived:
+        label: Archived 
+        type: switch

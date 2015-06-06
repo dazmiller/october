@@ -1,0 +1,17 @@
+<table id="result" class="table table-hover table-striped">
+	{% if requests.count > 0 %}
+	<thead>
+		<tr>
+		<th>Group</th>
+		<th>Created by</th>
+		<th>Membership</th>
+		<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% partial '@list' %}
+	</tbody>
+	{% endif %}
+</table>
+
+

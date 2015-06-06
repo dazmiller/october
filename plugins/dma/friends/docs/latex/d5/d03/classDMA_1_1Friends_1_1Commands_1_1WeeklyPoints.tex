@@ -1,0 +1,44 @@
+\hypertarget{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints}{}\section{D\+M\+A\textbackslash{}Friends\textbackslash{}Commands\textbackslash{}Weekly\+Points Class Reference}
+\label{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints}\index{D\+M\+A\textbackslash{}\+Friends\textbackslash{}\+Commands\textbackslash{}\+Weekly\+Points@{D\+M\+A\textbackslash{}\+Friends\textbackslash{}\+Commands\textbackslash{}\+Weekly\+Points}}
+Inheritance diagram for D\+M\+A\textbackslash{}Friends\textbackslash{}Commands\textbackslash{}Weekly\+Points\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/d03/classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints_a3fb80cfeb37ba525e9b24e7362e35daf}{fire} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints_a246f543fbe9edae766eb00112beacf2c}{}{\bfseries \$name} = \textquotesingle{}friends\+:points-\/weekly\textquotesingle{}\label{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints_a246f543fbe9edae766eb00112beacf2c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints_a3fb80cfeb37ba525e9b24e7362e35daf}{}\index{D\+M\+A\+::\+Friends\+::\+Commands\+::\+Weekly\+Points@{D\+M\+A\+::\+Friends\+::\+Commands\+::\+Weekly\+Points}!fire@{fire}}
+\index{fire@{fire}!D\+M\+A\+::\+Friends\+::\+Commands\+::\+Weekly\+Points@{D\+M\+A\+::\+Friends\+::\+Commands\+::\+Weekly\+Points}}
+\subsubsection[{fire}]{\setlength{\rightskip}{0pt plus 5cm}D\+M\+A\textbackslash{}\+Friends\textbackslash{}\+Commands\textbackslash{}\+Weekly\+Points\+::fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDMA_1_1Friends_1_1Commands_1_1WeeklyPoints_a3fb80cfeb37ba525e9b24e7362e35daf}
+Set the number of points set per week back to zero on sunday morning \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+27     \{
+28         DB::table(\textcolor{stringliteral}{'users'})
+29             ->update([\textcolor{stringliteral}{'points\_this\_week'} => 0]);
+30     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+commands/Weekly\+Points.\+php\end{DoxyCompactItemize}

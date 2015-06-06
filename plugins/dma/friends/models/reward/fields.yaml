@@ -1,0 +1,137 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Title
+    toolbar:
+        type: partial
+        path: ~/plugins/dma/friends/partials/_content_toolbar.htm
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        # ===================================
+        #  Content tab 
+        # ===================================
+        description:
+            label: Description
+            tab: Content
+            span: left 
+            type: richeditor
+            size: huge
+        image:
+            label: Image
+            type: fileupload
+            span: right
+            tab: Content
+            mode: image
+            imageHeight: 300
+            imageWidth: 500
+        excerpt:
+            label: Excerpt
+            description: a short amount of text about this badge.  This will be displayed in badge listings
+            tab: Content
+            type: richeditor
+            size: huge
+        fine_print: 
+            label: The Fine Print
+            description: This is displayed on the Reward detail view and on the printed coupon.
+            tab: Content
+            type: textarea
+
+        # ===================================
+        #  Configuration tab 
+        # ===================================
+        points:
+            label: Points to redeem
+            description: The number of points required to redeem this reward
+            tab: Configuration
+            type: number
+            required: true
+            default: 0
+            span: left
+        barcode:
+            label: Barcode Value
+            description: The value of the barcode printed on the coupon.
+            tab: Configuration
+            span: left
+        inventory:
+            label: Inventory
+            description: Number of reward items in inventory
+            tab: Configuration
+            span: left
+            type: number
+            span: left
+        enable_email:
+            label: Email upon redemption
+            description: If checked send an email to the user if they redeem this reward
+            tab: Configuration
+            type: checkbox
+        email_template:
+            label: Email Template 
+            tab: Configuration
+            span: left
+            type: dropdown
+        enable_admin_email:
+            label: Email a notification to administrators
+            description: When a reward has been redeemed send administrators a notification
+            tab: Configuration
+            type: checkbox
+        admin_email_template:
+            label: Admin Email Template
+            tab: Configuration
+            span: left
+            type: dropdown
+        admin_email_group:
+            label: Send admin email to a user group 
+            tab: Configuration
+            span: left
+            type: dropdown
+        admin_email_address:
+            label: Send admin email to an individual email address 
+            tab: Configuration
+            span: right
+        redemption_email:
+            label: Redemption Email (NOTE: This field is legacy and will be removed in a future version)
+            description: If not blank, send an email to the recipient upon redemption with the specified text.
+            tab: Configuration
+            type: textarea
+        # ===================================
+        #  Publishing Options tab 
+        # ===================================
+        date_begin:
+            label: Beginning Date
+            description: If set, Reward can only be redeemed after this date.
+            span: left
+            tab: Publishing Options
+            type: datepicker
+            mode: datetime
+        date_end:
+            label: Ending Date
+            description: If set, Reward can only be redeemed before this date.
+            span: right
+            tab: Publishing Options
+            type: datepicker
+            mode: datetime
+        is_hidden:
+            label: Hide Reward
+            description: If checked hide this Reward from users until they meet the points requirement.
+            tab: Publishing Options
+            type: checkbox
+        is_published:
+            label: Published
+            type: checkbox
+            tab: Publishing Options
+        is_archived:
+            label: Archive
+            type: checkbox
+            tab: Publishing Options
+        # created_at:
+        #     label: Created on
+        #     type: datepicker
+        #     mode: datetime
+        #     span: left
+        #     tab: Publishing Options

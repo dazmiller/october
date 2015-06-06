@@ -1,0 +1,34 @@
+{
+    "name": "dma/friends",
+    "description": "A platform for users to earn badges and redeem rewards",
+    "homepage": "http://www.dma.org",
+    "keywords": ["october", "cms", "friends", "fractal"],
+    "authors": [
+        {
+            "name": "Kristen Arnold",
+            "email": "karnold@dma.org"
+        },
+        {
+            "name": "Carlos Arroyo",
+            "email": "Carlos.Arroyo@dma.org"
+        }
+    ],
+    "repositories": [
+        {
+            "url": "https://github.com/smirik/php-datetime-ago.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "ellipsesynergie/api-response": "0.9.*",
+        "league/factory-muffin": "~2.1",
+        "twilio/sdk": "3.12.6",
+        "j7mbo/twitter-api-php": "dev-master",
+        "smirik/php-datetime-ago": "~1.0",
+        "nategood/httpful": "*",
+        "mandrill/mandrill": "1.0.*",
+        "hashids/hashids": "1.0.5",
+        "giggsey/libphonenumber-for-php": "~7.0",
+        "maatwebsite/excel": "~2.0"       
+    }
+}

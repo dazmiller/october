@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: Title
+    uuid:
+        label: UUID
+    is_authorized:
+        label: Authorized for barcode scanner
+        type: switch
+    description:
+        label: Description
+    printer_membership:
+        label: Membership Printer 
+    printer_reward:
+        label: Reward Printer

@@ -1,0 +1,122 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        # General
+        organization:
+            label: Institution/Organization
+            span: left
+            tab: General
+        timezone:
+            label: Timezone
+            span: left
+            type: dropdown
+            tab: General
+        default_state:
+            label: Default State 
+            span: left
+            type: dropdown
+            tab: General
+        report_cache:
+            label: Cache report data for X minutes
+            span: left
+            tab: General
+
+        # Kiosk
+        kiosk_idle_time:
+            label: Kiosk Idle Logout Time (in seconds)
+            span: left
+            tab: Kiosk
+        send_badge_email:
+            label: Send email upon badge completion
+            span: left
+            tab: Kiosk
+            type: checkbox
+        # Groups
+        maximum_users_per_group:
+            span: auto
+            label: Maximum number of users per group
+            description: Limit of users that can be join or invite to a group.
+            tab: Groups
+        maximum_points_per_group:
+            span: auto
+            label: Maximum points per group
+            description: Limit of point and user can earn by the group.
+            tab: Groups
+        maximum_user_group_memberships:
+            span: auto
+            label: Maximum number of groups a user can join
+            description: Limit of groups a user can join.
+            default: 1
+            tab: Groups  
+        maximum_groups_own_per_user:
+            span: auto
+            label: Maximum number of groups a user can own
+            description: Limit of groups a user can own.
+            default: 1
+            tab: Groups                                                 
+        reset_groups_time:            
+            span: left
+            label: Reset groups at
+            tab: Groups
+            type: datepicker
+            mode: time
+        reset_groups_every_day:
+            type: checkboxlist
+            span: auto
+            label: Day to reset groups
+            tab: Groups           
+            
+        # Notifications
+        active_notification_channels:
+            type: checkboxlist
+            span: auto
+            label: Notification channels
+            description: Enable or disable notification channels used by the platform.
+            tab: Notifications
+
+        # Listeners
+        active_listenable_channels:
+            type: checkboxlist
+            span: auto
+            label: Listenable channels
+            description: Enable or disable listen any incoming data of the channel.
+            tab: Listeners
+
+        # Print settings
+        coupon_width:
+            label: Coupon Width
+            type: number
+            span: left
+            tab: Printer
+        coupon_height:
+            label: Coupon Height 
+            type: number
+            span: right
+            tab: Printer
+        coupon_orientation:
+            label: Coupon Orientation 
+            type: dropdown
+            options:
+                P: Portrait
+                L: Landscape
+            tab: Printer
+        membership_width:
+            label: Membership Card Width
+            type: number
+            span: left
+            tab: Printer
+        membership_height:
+            label: Membership Card Height
+            type: number
+            span: right
+            tab: Printer
+        membership_orientation:
+            label: Membership Card Orientation
+            type: dropdown
+            options:
+                P: Portrait
+                L: Landscape
+            tab: Printer

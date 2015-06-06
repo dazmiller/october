@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    count:
+        label: Must complete X amount of times
+        type: number
+        default: 1
+    activity:
+        label: Activity
+        type: relation
+        nameFrom: title
